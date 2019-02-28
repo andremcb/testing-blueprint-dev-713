@@ -55,21 +55,13 @@ function modules() {
   // Font Awesome
   var fontAwesome = gulp.src('./node_modules/@fortawesome/**/*')
     .pipe(gulp.dest('./vendor'));
-  // jQuery Easing
-  var jqueryEasing = gulp.src('./node_modules/jquery.easing/*.js')
-    .pipe(gulp.dest('./vendor/jquery-easing'));
   // jQuery
   var jquery = gulp.src([
       './node_modules/jquery/dist/*',
       '!./node_modules/jquery/dist/core.js'
     ])
     .pipe(gulp.dest('./vendor/jquery'));
-  // Simple Line Icons
-  var simpleLineIconsFonts = gulp.src('./node_modules/simple-line-icons/fonts/**')
-    .pipe(gulp.dest('./vendor/simple-line-icons/fonts'));
-  var simpleLineIconsCSS = gulp.src('./node_modules/simple-line-icons/css/**')
-    .pipe(gulp.dest('./vendor/simple-line-icons/css'));
-  return merge(bootstrap, fontAwesome, jquery, jqueryEasing, simpleLineIconsFonts, simpleLineIconsCSS);
+  return merge(bootstrap, fontAwesome, jquery);
 }
 
 // CSS task
